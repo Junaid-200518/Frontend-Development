@@ -1,0 +1,17 @@
+ h1{
+            text-align: center;
+        }table{
+            border-collapse:collapse;
+            width: 600px;
+            background-color: aquamarine;
+        }
+        th{
+            text-align: center;
+            color:green;
+
+        }
+        td{
+            text-align: center;
+            color: brown;
+            font-family: 'Courier New', Courier, monospace;
+        }

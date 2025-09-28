@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+           <h1>Java Script learning</h1>
+           <p>Enter your name:</p>
+           <input type="text"id="nameInput" placeholder="your name here"/>
+           <button onclick="greetUser()">Greet </button>
+
+           <p id="greetingOutput"></p>
+
+
+    </center>
+ 
+    <script>
+        function greetUser(){
+            const name=document.getElementById('nameInput').value;
+
+            if(name.trim()== ""){
+                document.getElementById('greetingOutput').textContent="Please enter your name!";
+                return
+            }
+            const greeting="Hello,"+name+"!";
+            document.getElementById('greetingOutput').textContent=greeting;
+
+        }
+        let x=50;
+        let y=60;
+
+        console.log(x + y);
+
+  
+
+        
+
+    </script>
+    
+</body>
+</html>
