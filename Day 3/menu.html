@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Dropdown Menu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #3498db;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Main Menu Items */
+    .menu {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .menu > li {
+      position: relative;
+    }
+
+    .menu > li > a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .menu > li > a:hover {
+      background-color: #2980b9;
+    }
+
+    /* Dropdown (hidden by default) */
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    /* Show on hover */
+    .menu > li:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* Dropdown items */
+    .dropdown a {
+      display: block;
+      padding: 12px 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background 0.2s ease;
+    }
+
+    .dropdown a:hover {
+      background-color: #f1f1f1;
+      color: #2980b9;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul class="menu">
+      <li>
+        <a href="#">Home</a>
+      </li>
+
+      <li>
+        <a href="#">Menu ▾</a>
+        <div class="dropdown">
+          <a href="#">Starters</a>
+          <a href="#">Main Course</a>
+          <a href="#">Desserts</a>
+          <a href="#">Beverages</a>
+        </div>
+      </li>
+
+      <li>
+        <a href="#">Services ▾</a>
+        <div class="dropdown">
+          <a href="#">Catering</a>
+          <a href="#">Delivery</a>
+          <a href="#">Takeaway</a>
+        </div>
+      </li>
+
+      <li>
+        <a href="#">About</a>
+      </li>
+
+      <li>
+        <a href="#">Contact ▾</a>
+        <div class="dropdown">
+          <a href="#">Email Us</a>
+          <a href="#">Find Us</a>
+          <a href="#">Book a Table</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+</html>
