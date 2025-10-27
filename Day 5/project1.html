@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parallax Practice Site - Bootstrap 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <style>
+    body {
+      padding-top: 70px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #222;
+      border: none;
+    }
+
+    .navbar-brand, .navbar-nav > li > a {
+      color: #f2f2f2 !important;
+    }
+
+    .navbar-brand:hover, .navbar-nav > li > a:hover {
+      color: #00bcd4 !important;
+    }
+
+    /* Parallax sections */
+    .parallax {
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    /* Overlay for better text visibility */
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 100px 20px;
+      width: 100%;
+    }
+
+    /* Content sections */
+    .content-section {
+      padding: 70px 15px;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    p.lead {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Buttons */
+    .btn-custom {
+      background-color: #00bcd4;
+      color: white;
+      border-radius: 25px;
+      padding: 10px 25px;
+    }
+
+    .btn-custom:hover {
+      background-color: #0097a7;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #bbb;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <!-- Navbar header -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#home">ParallaxSite</a>
+      </div>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HOME SECTION ===== -->
+  <div id="home" class="parallax" style="background-image: url('new.jpg');">
+    <div class="overlay">
+      <h1>Welcome to ParallaxSite</h1>
+      <p class="lead">A simple & beautiful Bootstrap 3 parallax example for students</p>
+      <a href="#about" class="btn btn-custom">Learn More</a>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <div id="about" class="content-section">
+    <div class="container">
+      <h2>About This Project</h2>
+      <p class="lead">
+        This page demonstrates how to create a clean parallax scrolling effect using Bootstrap 3 and a bit of CSS.
+        It's great for learning how to build visually interesting one-page websites.
+      </p>
+      <p>
+        The parallax effect happens when the background image stays fixed while the foreground content scrolls —
+        giving a nice sense of depth to your website design.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== PARALLAX 2 ===== -->
+  <div class="parallax" style="background-image: url('pic2.jpg');">
+    <div class="overlay">
+      <h2>Design with Depth</h2>
+      <p>Engaging layouts make your projects stand out!</p>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <div id="services" class="content-section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-education" style="font-size:50px; color:#00bcd4;"></span>
+          <h4>Learn</h4>
+          <p>Step-by-step guides help students understand parallax web design easily.</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-cog" style="font-size:50px; color:#00bcd4;"></span>
+          <h4>Build</h4>
+          <p>Use Bootstrap’s grid system to create responsive, beautiful layouts.</p>
+        </div>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-globe" style="font-size:50px; color:#00bcd4;"></span>
+          <h4>Share</h4>
+          <p>Host your finished projects on GitHub Pages or Netlify to show the world!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PARALLAX 3 ===== -->
+  <div class="parallax" style="background-image: url('pic3.jpg');">
+    <div class="overlay">
+      <h2>See the World in Motion</h2>
+      <p>Scroll down and watch how the background moves differently from the content.</p>
+    </div>
+  </div>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <div id="gallery" class="content-section">
+    <div class="container">
+      <h2>Our Gallery</h2>
+      <div class="row">
+        <div class="col-sm-4"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="img-responsive img-thumbnail"></div>
+        <div class="col-sm-4"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="img-responsive img-thumbnail"></div>
+        <div class="col-sm-4"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" class="img-responsive img-thumbnail"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <div id="contact" class="content-section" style="background:#f7f7f7;">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="lead">We’d love to hear from you! Reach out for collaborations or questions.</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Email: <a href="mailto:student@example.com">student@example.com</a></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Location: Your School or College</p>
+      <a href="#home" class="btn btn-custom">Back to Top</a>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Parallax Practice Project | Designed for Students with ❤️ using Bootstrap 3</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
